@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+</head>
+<body>
+        <table border="1">
+            <thead>
+            <th>Id</th><th>Name</th><th>Area</th><th>Email</th><th>
+                Gender</th><th>Meterno</th><th>Bill_amount</th><th>Action</th>>
+            </thead>
+             {{message}}
+            {% for cust in custm %}
+            <tbody>
+            <td>{{cust.eid}}</td>
+            <td>{{cust.name}}</td>
+            <td>{{cust.area}}</td>
+            <td>{{cust.email}}</td>
+            <td>{{cust.gender}}</td>
+            <td>{{cust.meterno}}</td>
+            <td>{{cust.bill_amount}}</td>
+            <td><a href="/edit/{{cust.eid}}" >Edit</a> <a href="/delete/{{cust.eid}}" >Delete</a> </td>
+
+            {% endfor %}
+
+            </tbody>
+        </table><br>
+         <a href="/welcome">Home</a> <br><br>
+
+</body>
+</html>

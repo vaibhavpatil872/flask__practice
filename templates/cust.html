@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add_cust</title>
+</head>
+<body>
+<h1>Customer Data</h1>
+{{msg}}
+<form method="post" action="/addcust" enctype="multipart/form-data">
+
+    Id :<input type="text" name="cid"  value="{{cust.eid}}"><br><br>
+    Name : <input type="text" name="cname" value="{{cust.name}}"><br><br>
+    Area : <input type="text" name="carea" value="{{cust.area}}"><br><br>
+    Email : <input type="text" name="email" value="{{cust.email}}"><br><br>
+    {% if cust.gender=='Male' %}
+    Gender : <input type="radio" name="gender" value="Male" checked>Male
+    <input type="radio" name="gender" value="Female">Female<br><br>
+    {% elif cust.gender=='Female' %}
+    Gender : <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female" checked>Female<br><br>
+    {% else %}
+    Gender : <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female" >Female<br><br>
+    {% endif %}
+    MeterNo : <input type="text" name="meterno" value="{{cust.meterno}}"><br><br>
+    Bill Amount : <input type="text" name="bill" value="{{cust.bill}}"><br><br>
+    Image:<input type ="file" name ="image"><br><br>
+    <input type="submit">  &nbsp &nbsp <a href="/welcome">Home</a> <br><br>
+
+
+</form>
+</body>
+</html>
+
+
+
+
+
+

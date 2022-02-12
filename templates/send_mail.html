@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Mail</title>
+</head>
+<body>
+<h1>Customer Mail</h1>
+{{message}}
+
+<form method="post" action="/sendmail">
+    <input type="email" name="email" placeholder="Email" required id="1">
+    <input type="text" name="subject" placeholder="Subject" required id="3">
+    <textarea name="message" id="2" cols="30" placeholder="Message Body" required rows="10"></textarea>
+    <input type="submit" value="send message">
+    <a href="/welcome">HOME</a>
+
+
+
+
+
+
+</form>
+</body>
+</html>
